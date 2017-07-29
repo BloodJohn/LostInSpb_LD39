@@ -16,9 +16,19 @@ public class GameController : MonoBehaviour
     public Text answerText;
     public Text descriptionText;
 
+    public Image happyFill;
+    public Image hungerFill;
+    public Image restRoomFill;
+    public Image moneyFill;
+
     public static void Load()
     {
         SceneManager.LoadSceneAsync(SceneName);
+    }
+
+    private void Start()
+    {
+        NextCrad();
     }
 
     private void Update()
@@ -54,8 +64,6 @@ public class GameController : MonoBehaviour
 
     private void OnMouseUp(Vector2 shift)
     {
-        Debug.LogFormat("UP {0}", shift.x);
-
         if (Mathf.Abs(shift.x) > 1)
         {
             cardHolder.transform.localRotation = Quaternion.identity;
@@ -114,5 +122,10 @@ public class GameController : MonoBehaviour
         cardImage.sprite = CoreGame.Instance.currentCard.Image;
         descriptionText.text = CoreGame.Instance.currentCard.Description;
         questionText.text = CoreGame.Instance.currentCard.Question;
+
+        happyFill.fillAmount = CoreGame.Instance.happy;
+        hungerFill.fillAmount = CoreGame.Instance.hunger;
+        restRoomFill.fillAmount = CoreGame.Instance.restRoom;
+        moneyFill.fillAmount = CoreGame.Instance.money;
     }
 }
