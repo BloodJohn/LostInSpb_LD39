@@ -9,4 +9,9 @@ public class LoadController : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneName);
     }
+
+    private void Start()
+    {
+        IntroController.Load();
+    }
 }
