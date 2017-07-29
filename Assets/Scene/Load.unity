@@ -236,6 +236,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54b83795f0cf38a479615d0934471b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desk:
+  - id: 1
+    Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
+    Description: not speak English
+    Question: Stranger looks questioningly at you
+    AnswerLeft: Take me to the Embassy!
+    AnswerRight: Airport Pulkovo!
+  - id: lose
+    Image: {fileID: 21300000, guid: 46b1eb59918316341859519f601a61d7, type: 3}
+    Description: I'm sorry
+    Question: You are dead
+    AnswerLeft: WTF?!
+    AnswerRight: Play Again
+  - id: win
+    Image: {fileID: 21300000, guid: 6a8df8fef3483c5479ce803146413162, type: 3}
+    Description: we will miss you
+    Question: The plane takes you home
+    AnswerLeft: Great!
+    AnswerRight: I'll be back
+  currentCard:
+    id: 
+    Image: {fileID: 0}
+    Description: 
+    Question: 
+    AnswerLeft: 
+    AnswerRight: 
 --- !u!4 &1958070437
 Transform:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     private Vector2 touchFinish;
 
     public GameObject cardHolder;
+    public SpriteRenderer cardImage;
     public GameObject cardPanel;
 
     public Text questionText;
@@ -55,22 +56,26 @@ public class GameController : MonoBehaviour
     {
         Debug.LogFormat("UP {0}", shift.x);
 
-        touchStart = Vector2.zero;
-        touchFinish = Vector2.zero;
-        UpdateCardPanel(0f);
-
         if (Mathf.Abs(shift.x) > 1)
         {
             cardHolder.transform.localRotation = Quaternion.identity;
 
             if (shift.x > 0)
             {
-                Debug.LogFormat("UP LEFT {0}", shift.x);
+                CoreGame.Instance.SetRight();
             }
             else
             {
-                Debug.LogFormat("UP RIGHT {0}", shift.x);
+                CoreGame.Instance.SetLeft();
             }
+
+            NextCrad();
+        }
+        else
+        {
+            touchStart = Vector2.zero;
+            touchFinish = Vector2.zero;
+            UpdateCardPanel(0f);
         }
     }
 
@@ -87,14 +92,27 @@ public class GameController : MonoBehaviour
             if (shift > 0)
             {
                 answerText.alignment = TextAnchor.UpperRight;
-                answerText.text = "RIGHT";
+                answerText.text = CoreGame.Instance.currentCard.AnswerRight;
             }
             else
             {
                 answerText.alignment = TextAnchor.UpperLeft;
-                answerText.text = "LEFT";
+                answerText.text = CoreGame.Instance.currentCard.AnswerLeft;
             }
         }
   
+    }
+
+    private void NextCrad()
+    {
+        touchStart = Vector2.zero;
+        touchFinish = Vector2.zero;
+        UpdateCardPanel(0f);
+
+        Debug.LogFormat("NEXT CARD {0}", CoreGame.Instance.currentCard.id);
+
+        cardImage.sprite = CoreGame.Instance.currentCard.Image;
+        descriptionText.text = CoreGame.Instance.currentCard.Description;
+        questionText.text = CoreGame.Instance.currentCard.Question;
     }
 }
