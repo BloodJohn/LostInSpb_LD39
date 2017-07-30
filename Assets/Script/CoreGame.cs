@@ -26,15 +26,32 @@ public class CoreGame : MonoBehaviour
     public float money = 1f;
 
     private const string fileName = "MyFile.txt";
+
     private const string hipster1 = "hipster1";
     private const string hipster1left = "hipster1left";
     private const string hipster1right = "hipster1right";
+
     private const string grandma1 = "grandma1";
     private const string grandma1left = "grandma1left";
     private const string grandma1right = "grandma1right";
+
     private const string girl1 = "girl1";
     private const string girl1left = "girl1left";
     private const string girl1right = "girl1right";
+
+    private const string homeless1 = "homeless1";
+    private const string homeless1left = "homeless1left";
+    private const string homeless1right = "homeless1right";
+
+    private const string mac1 = "mac1";
+    private const string mac1left = "mac1left";
+    private const string mac1right = "mac1right";
+
+    private const string shawarma1 = "shawarma1";
+    private const string shawarma1left = "shawarma1left";
+    private const string shawarma1right = "shawarma1right";
+
+
     private const string win = "win";
     private const string lose = "lose";
 
@@ -106,6 +123,71 @@ public class CoreGame : MonoBehaviour
             happy = Mathf.Min(1f, happy + 0.3f);
             DropCard();
         }
+        else if (currentCard.id == homeless1) //Спроси у бомжа
+        {
+            //дать денег
+            money = Mathf.Max(0f, money - 0.1f);
+            SetCardById(homeless1left);
+        }
+        else if (currentCard.id == homeless1left) //Спасибо брат!
+        {
+            //где туалет?
+            happy = Mathf.Min(1f, happy + 0.2f);
+            restRoom = 1f;
+            DropCard();
+        }
+        else if (currentCard.id == homeless1right) //Подайте на опохмел!
+        {
+            //пить - вредно!
+            happy = Mathf.Max(0f, happy - 0.1f);
+            DropCard();
+        }
+        else if (currentCard.id == mac1) //Спроси в MacDonalds
+        {
+            //Туалет?
+            SetCardById(mac1left);
+        }
+        else if (currentCard.id == mac1left) //Туалет - всегда занят.
+        {
+            //Я подожду
+            happy = Mathf.Max(0f, happy - 0.1f);
+            DropCard();
+        }
+        else if (currentCard.id == mac1right) //Что-то еще будете?
+        {
+            //Нет. Это все.
+            money -= 0.3f;
+            hunger = 1f;
+            DropCard();
+        }
+        else if (currentCard.id == shawarma1) //Спроси в Шаверме
+        {
+            //Шаверму!
+            if (money >= 0.3f)
+            {
+                hunger = Mathf.Min(1f, hunger + 0.1f); //внутри ресторанов голод не растет
+                SetCardById(shawarma1left);
+            }
+            else
+            {
+                Debug.LogFormat("no money {0} < 0.3f", money);
+                happy = Mathf.Max(0f, happy - 0.2f);
+                DropCard();
+            }
+        }
+        else if (currentCard.id == shawarma1left) //Сделаем, брат!
+        {
+            //Спасибо, брат!
+            money -= 0.3f;
+            hunger = 1f;
+            DropCard();
+        }
+        else if (currentCard.id == shawarma1right) //В конце зала направо
+        {
+            //Спасибо!
+            restRoom = 1f;
+            DropCard();
+        }
         else
         {
             Restart();
@@ -169,6 +251,75 @@ public class CoreGame : MonoBehaviour
             happy = Mathf.Min(1f, happy + 0.5f);
             DropCard();
         }
+        else if (currentCard.id == homeless1) //Спроси у бомжа
+        {
+            //не давать
+            happy = Mathf.Max(0f, happy - 0.1f);
+            SetCardById(homeless1right);
+        }
+        else if (currentCard.id == homeless1left) //Спасибо брат!
+        {
+            //не болей
+            happy = Mathf.Min(1f, happy + 0.2f);
+            DropCard();
+        }
+        else if (currentCard.id == homeless1right) //Подайте на опохмел!
+        {
+            //где туалет?
+            happy = Mathf.Max(0f, happy - 0.1f);
+            DropCard();
+        }
+        else if (currentCard.id == mac1) //Спроси в MacDonalds
+        {
+            //Cheeseburger!
+            if (money >= 0.3f)
+            {
+                SetCardById(mac1right);
+            }
+            else
+            {
+                Debug.LogFormat("no money {0} < 0.3f", money);
+                happy = Mathf.Max(0f, happy - 0.2f);
+                DropCard();
+            }
+        }
+        else if (currentCard.id == mac1left) //Туалет - всегда занят.
+        {
+            //Cheeseburger!
+            if (money >= 0.3f)
+            {
+                SetCardById(mac1right);
+            }
+            else
+            {
+                Debug.LogFormat("no money {0} < 0.3f", money);
+                happy = Mathf.Max(0f, happy - 0.2f);
+                DropCard();
+            }
+        }
+        else if (currentCard.id == mac1right) //Что-то еще будете?
+        {
+            //Отмените заказ
+            DropCard();
+        }
+        else if (currentCard.id == shawarma1) //Спроси в Шаверме
+        {
+            //Туалет?
+            SetCardById(shawarma1right);
+        }
+        else if (currentCard.id == shawarma1left) //Сделаем, брат!
+        {
+            //Туалет?
+            money -= 0.3f;
+            hunger = 1f;
+            SetCardById(shawarma1right);
+        }
+        else if (currentCard.id == shawarma1right) //В конце зала направо
+        {
+            //Благодарю!
+            restRoom = 1f;
+            DropCard();
+        }
         else
         {
             Restart();
@@ -186,6 +337,9 @@ public class CoreGame : MonoBehaviour
         dropList.Add(hipster1);
         dropList.Add(grandma1);
         dropList.Add(girl1);
+        dropList.Add(homeless1);
+        dropList.Add(mac1);
+        dropList.Add(shawarma1);
 
         DropCard();
     }
