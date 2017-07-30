@@ -1,18 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
 using System.IO;
-#endif
+#endif*/
 
 public class CoreGame : MonoBehaviour
 {
     public static CoreGame Instance;
-    
+
     /// <summary>Колода ВСЕХ карт в игре</summary>
     public CardData[] desk;
     [HideInInspector]
     public CardData currentCard;
+    private readonly List<string> dropList = new List<string>(6);
 
     /// <summary>уровень счастья</summary>
     public float happy = 1f;
@@ -23,7 +25,13 @@ public class CoreGame : MonoBehaviour
     /// <summary>достаточно денег</summary>
     public float money = 1f;
 
-    private string fileName = "MyFile.txt";
+    private const string fileName = "MyFile.txt";
+    private const string hipster1 = "hipster1";
+    private const string hipster1left = "hipster1left";
+    private const string hipster1right = "hipster1right";
+    private const string grandma1 = "grandma1";
+    private const string win = "win";
+    private const string lose = "lose";
 
     void Awake()
     {
@@ -35,23 +43,65 @@ public class CoreGame : MonoBehaviour
         //WriteFile();
     }
 
-    public void Restart()
+    private void Restart()
     {
-        currentCard = desk[0];
-        happy = Random.Range(0.7f, 1f);
+        happy = Random.Range(0.5f, 0.7f);
         hunger = Random.Range(0.7f, 1f);
         restRoom = Random.Range(0.7f, 1f);
-        money = Random.Range(0.7f, 1f);
+        money = Random.Range(0.1f, 0.3f);
+
+        dropList.Clear();
+        dropList.Add(hipster1);
+        dropList.Add(grandma1);
+
+        DropCard();
+    }
+
+    private void SetCardById(string id)
+    {
+        foreach (var card in desk)
+            if (card.id == id)
+            {
+                currentCard = card;
+                return;
+            }
+    }
+
+    private void DropCard()
+    {
+        if (dropList.Count > 0)
+        {
+            var index = Random.Range(0, dropList.Count);
+            SetCardById(dropList[index]);
+            dropList.RemoveAt(index);
+        }
+        else
+        {
+            SetCardById(win);
+        }
     }
 
     public void SetLeft()
     {
-        Debug.LogFormat("UP LEFT");
-
-        if (currentCard.id == "1")
+        if (currentCard.id == hipster1) //Спроси у хипстера
         {
-            currentCard = desk[1];
-            happy = Mathf.Max(0f, happy - 0.5f);
+            //Где здесь MacDoladls?
+            happy = Mathf.Max(0f, happy - 0.1f);
+            hunger = Mathf.Max(0f, hunger - 0.1f);
+            SetCardById(hipster1left);
+        }
+        else if (currentCard.id == hipster1right) //Банкомат недалеко. Я провожу тебя.
+        {
+            //Спасибо!
+            happy = Mathf.Min(1f, happy + 0.2f);
+            money = Mathf.Min(1f, money + 0.5f);
+            SetCardById(hipster1);
+        }
+        else if (currentCard.id == hipster1left) //Нездоровая пища! Фалафель и смузи - наше все!
+        {
+            //Я вырос на ней
+            happy = Mathf.Max(0f, happy - 0.1f);
+            SetCardById(hipster1);
         }
         else
         {
@@ -61,12 +111,23 @@ public class CoreGame : MonoBehaviour
 
     public void SetRight()
     {
-        Debug.LogFormat("UP RIGHT");
-
-        if (currentCard.id == "1")
+        if (currentCard.id == hipster1) //Спроси у хипстера
         {
-            currentCard = desk[2];
-            happy = Mathf.Min(1f, happy + 0.5f);
+            //Как обналичить кредитку?
+            happy = Mathf.Min(1f, happy + 0.1f);
+            SetCardById(hipster1right);
+        }
+        else if (currentCard.id == hipster1right) //Банкомат недалеко. Я провожу тебя.
+        {
+            //Я передумал
+            happy = Mathf.Max(0f, happy - 0.1f);
+            SetCardById(hipster1);
+        }
+        else if (currentCard.id == hipster1left) //Нездоровая пища! Фалафель и смузи - наше все!
+        {
+            //Ненавижу смузи
+            happy = Mathf.Max(0f, happy - 0.2f);
+            SetCardById(hipster1);
         }
         else
         {
@@ -74,7 +135,7 @@ public class CoreGame : MonoBehaviour
         }
     }
 
-    private void WriteFile()
+    /*private void WriteFile()
     {
 #if UNITY_EDITOR
         if (File.Exists(fileName))
@@ -83,11 +144,9 @@ public class CoreGame : MonoBehaviour
             return;
         }
         var sr = File.CreateText(fileName);
-        var data = new Desk {desk = desk};
+        var data = new Desk { desk = desk };
         var jsonText = JsonUtility.ToJson(data);
         sr.Write(jsonText);
-        /*sr.WriteLine("This is my file.");
-        sr.WriteLine("I can write ints {0} or floats {1}, and so on.", 1, 4.2);*/
         sr.Close();
 #endif
     }
@@ -96,5 +155,5 @@ public class CoreGame : MonoBehaviour
     class Desk
     {
         public CardData[] desk;
-    }
+    }*/
 }
