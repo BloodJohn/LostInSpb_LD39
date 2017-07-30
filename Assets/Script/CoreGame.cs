@@ -163,14 +163,14 @@ public class CoreGame : MonoBehaviour
         else if (currentCard.id == shawarma1) //Спроси в Шаверме
         {
             //Шаверму!
-            if (money >= 0.3f)
+            if (money >= 0.2f)
             {
                 hunger = Mathf.Min(1f, hunger + 0.1f); //внутри ресторанов голод не растет
                 SetCardById(shawarma1left);
             }
             else
             {
-                Debug.LogFormat("no money {0} < 0.3f", money);
+                Debug.LogFormat("no money {0} < 0.2f", money);
                 happy = Mathf.Max(0f, happy - 0.2f);
                 DropCard();
             }
@@ -178,7 +178,7 @@ public class CoreGame : MonoBehaviour
         else if (currentCard.id == shawarma1left) //Сделаем, брат!
         {
             //Спасибо, брат!
-            money -= 0.3f;
+            money -= 0.2f;
             hunger = 1f;
             DropCard();
         }
@@ -248,6 +248,7 @@ public class CoreGame : MonoBehaviour
         else if (currentCard.id == girl1right) //Правда! Тогда тебе понравится здание Зингера, с книжным магазином.
         {
             //Куплю карту.
+            money = Mathf.Max(0f, money - 0.1f);
             happy = Mathf.Min(1f, happy + 0.5f);
             DropCard();
         }
@@ -331,7 +332,7 @@ public class CoreGame : MonoBehaviour
         happy = Random.Range(0.5f, 0.7f);
         hunger = Random.Range(0.7f, 1f);
         restRoom = Random.Range(0.7f, 1f);
-        money = Random.Range(0.1f, 0.3f);
+        money = Random.Range(0.2f, 0.4f);
 
         dropList.Clear();
         dropList.Add(hipster1);
