@@ -108,6 +108,193 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &780162151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 780162153}
+  - component: {fileID: 780162152}
+  m_Layer: 0
+  m_Name: CoreGame_rus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &780162152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780162151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b83795f0cf38a479615d0934471b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desk:
+  - id: win
+    Image: {fileID: 21300000, guid: 6a8df8fef3483c5479ce803146413162, type: 3}
+    Description: we will miss you
+    Question: The plane takes you home
+    AnswerLeft: Great!
+    AnswerRight: I'll be back
+  - id: lose
+    Image: {fileID: 21300000, guid: 46b1eb59918316341859519f601a61d7, type: 3}
+    Description: I'm sorry
+    Question: You are dead
+    AnswerLeft: WTF?!
+    AnswerRight: Play Again
+  - id: hipster1
+    Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
+    Description: speak English
+    Question: "\u0427\u0435\u0433\u043E \u0442\u0435\u0431\u0435, \u043F\u0430\u0440\u0435\u043D\u044C?"
+    AnswerLeft: MacDoladls
+    AnswerRight: "\u041E\u0431\u043D\u0430\u043B\u0438\u0447\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442\u043A\u0443"
+  - id: hipster1left
+    Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
+    Description: speak English
+    Question: "\u041D\u0435\u0437\u0434\u043E\u0440\u043E\u0432\u0430\u044F \u043F\u0438\u0449\u0430!
+      \u0424\u0430\u043B\u0430\u0444\u0435\u043B\u044C \u0438 \u0441\u043C\u0443\u0437\u0438
+      - \u043D\u0430\u0448\u0435 \u0432\u0441\u0435!"
+    AnswerLeft: "\u042F \u0432\u044B\u0440\u043E\u0441 \u043D\u0430 \u043D\u0435\u0439"
+    AnswerRight: "\u041D\u0435\u043D\u0430\u0432\u0438\u0436\u0443 \u0441\u043C\u0443\u0437\u0438"
+  - id: hipster1right
+    Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
+    Description: speak English
+    Question: "\u0411\u0430\u043D\u043A\u043E\u043C\u0430\u0442 \u043D\u0435\u0434\u0430\u043B\u0435\u043A\u043E.
+      \u042F \u043F\u0440\u043E\u0432\u043E\u0436\u0443 \u0442\u0435\u0431\u044F."
+    AnswerLeft: "\u0412\u0435\u0434\u0438 \u043C\u0435\u043D\u044F"
+    AnswerRight: "\u042F \u043F\u0435\u0440\u0435\u0434\u0443\u043C\u0430\u043B"
+  - id: grandma1
+    Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
+    Description: old Lady
+    Question: "\u0421\u0442\u0440\u043E\u0433\u043E \u0441\u043C\u043E\u0442\u0440\u0438\u0442
+      \u043D\u0430 \u0442\u0435\u0431\u044F. \u0427\u0435\u0433\u043E \u043D\u0430\u0434\u043E,
+      \u0441\u044B\u043D\u043E\u043A?"
+    AnswerLeft: "\u0410\u044D\u0440\u043E\u043F\u043E\u0440\u0442"
+    AnswerRight: "\u041E\u0431\u043D\u0430\u043B\u0438\u0447\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442\u043A\u0443"
+  - id: grandma1left
+    Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
+    Description: old Lady
+    Question: "\u041F\u0443\u043B\u043A\u043E\u0432\u043E? \u042D\u0442\u043E \u0442\u0435\u0431\u0435
+      \u043D\u0430 \u043C\u0435\u0442\u0440\u043E \u043D\u0430\u0434\u043E. \u0441\u0442
+      \u041C\u043E\u0441\u043A\u043E\u0432\u0441\u043A\u0430\u044F."
+    AnswerLeft: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0431\u0430\u0431\u0443\u0448\u043A\u0430!"
+    AnswerRight: "\u041C\u0435\u0442\u0440\u043E? \u041D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E."
+  - id: grandma1right
+    Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
+    Description: old Lady
+    Question: "\u041D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E \u044F. \u0421\u043F\u0440\u043E\u0441\u0438
+      \u0443 \u0434\u0440\u0443\u0433\u043E\u0433\u043E."
+    AnswerLeft: "\u0411\u0435\u0441\u043F\u043E\u043B\u0435\u0437\u043D\u043E"
+    AnswerRight: "\u0418\u0437\u0432\u0438\u043D\u0438\u0442\u0435"
+  - id: girl1
+    Image: {fileID: 21300000, guid: 074eaf312fa11104eb41e5746104dc70, type: 3}
+    Description: pretty girl
+    Question: "\u0427\u0442\u043E \u0435\u0449\u0435? \u042F \u0441\u043F\u0435\u0448\u0443."
+    AnswerLeft: "\u0413\u0434\u0435 \u0442\u0443\u0430\u043B\u0435\u0442?"
+    AnswerRight: "\u041A\u0440\u0430\u0441\u0438\u0432\u044B\u0439 \u0433\u043E\u0440\u043E\u0434!"
+  - id: girl1left
+    Image: {fileID: 21300000, guid: 074eaf312fa11104eb41e5746104dc70, type: 3}
+    Description: pretty girl
+    Question: "\u041D\u0435 \u0437\u043D\u0430\u044E. \u041F\u043E\u0438\u0449\u0438
+      \u0441\u0430\u043C."
+    AnswerLeft: "\u041A\u0430\u043A \u0433\u0440\u0443\u0431\u043E!"
+    AnswerRight: "\u041D\u0443 \u0438\u0437\u0432\u0438\u043D\u0438\u0442\u0435!"
+  - id: girl1right
+    Image: {fileID: 21300000, guid: 074eaf312fa11104eb41e5746104dc70, type: 3}
+    Description: pretty girl
+    Question: "\u041F\u0440\u0430\u0432\u0434\u0430! \u0422\u043E\u0433\u0434\u0430
+      \u0442\u0435\u0431\u0435 \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F
+      \u0437\u0434\u0430\u043D\u0438\u0435 \u0417\u0438\u043D\u0433\u0435\u0440\u0430,
+      \u0441 \u043A\u043D\u0438\u0436\u043D\u044B\u043C \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u043E\u043C."
+    AnswerLeft: "\u041E\u0431\u043E\u0436\u0430\u044E \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0443."
+    AnswerRight: "\u041A\u0443\u043F\u043B\u044E \u043A\u0430\u0440\u0442\u0443."
+  - id: homeless1
+    Image: {fileID: 21300000, guid: a8a8c0eb626e09b4980d27b24a7a95d6, type: 3}
+    Description: home less
+    Question: "\u041F\u043E\u0434\u0430\u0439\u0442\u0435 \u043D\u0430 \u043E\u043F\u043E\u0445\u043C\u0435\u043B!"
+    AnswerLeft: "\u0434\u0430\u0442\u044C \u0434\u0435\u043D\u0435\u0433"
+    AnswerRight: "\u043D\u0435 \u0434\u0430\u0432\u0430\u0442\u044C"
+  - id: homeless1left
+    Image: {fileID: 21300000, guid: a8a8c0eb626e09b4980d27b24a7a95d6, type: 3}
+    Description: home less
+    Question: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0431\u0440\u0430\u0442!"
+    AnswerLeft: "\u0433\u0434\u0435 \u0442\u0443\u0430\u043B\u0435\u0442"
+    AnswerRight: "\u043D\u0435 \u0431\u043E\u043B\u0435\u0439"
+  - id: homeless1right
+    Image: {fileID: 21300000, guid: a8a8c0eb626e09b4980d27b24a7a95d6, type: 3}
+    Description: home less
+    Question: "\u041F\u043E\u0434\u0430\u0439\u0442\u0435 \u043D\u0430 \u043E\u043F\u043E\u0445\u043C\u0435\u043B!"
+    AnswerLeft: "\u043F\u0438\u0442\u044C - \u0432\u0440\u0435\u0434\u043D\u043E!"
+    AnswerRight: "\u0433\u0434\u0435 \u0442\u0443\u0430\u043B\u0435\u0442?"
+  - id: mac1
+    Image: {fileID: 21300000, guid: b15ef0096bd22d44197508a3ef1232e3, type: 3}
+    Description: Mac Donalds
+    Question: "\u0421\u0432\u043E\u0431\u043E\u0434\u043D\u0430\u044F \u043A\u0430\u0441\u0441\u0430!"
+    AnswerLeft: "\u0422\u0443\u0430\u043B\u0435\u0442?"
+    AnswerRight: Cheeseburger!
+  - id: mac1left
+    Image: {fileID: 21300000, guid: b15ef0096bd22d44197508a3ef1232e3, type: 3}
+    Description: Mac Donalds
+    Question: "\u0422\u0443\u0430\u043B\u0435\u0442 - \u0432\u0441\u0435\u0433\u0434\u0430
+      \u0437\u0430\u043D\u044F\u0442"
+    AnswerLeft: "\u042F \u043F\u043E\u0434\u043E\u0436\u0434\u0443"
+    AnswerRight: Cheeseburger!
+  - id: mac1right
+    Image: {fileID: 21300000, guid: b15ef0096bd22d44197508a3ef1232e3, type: 3}
+    Description: Mac Donalds
+    Question: "\u0427\u0442\u043E-\u0442\u043E \u0435\u0449\u0435 \u0431\u0443\u0434\u0435\u0442\u0435?"
+    AnswerLeft: "\u041D\u0435\u0442. \u042D\u0442\u043E \u0432\u0441\u0435."
+    AnswerRight: "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u0435 \u0437\u0430\u043A\u0430\u0437"
+  - id: shawarma1
+    Image: {fileID: 21300000, guid: 40d1793deaef89a42be6ee8040e67538, type: 3}
+    Description: fastfood, no english
+    Question: "\u0414\u043E\u0431\u0440\u044B\u0439 \u0434\u0435\u043D\u044C! \u0427\u0442\u043E
+      \u0436\u0435\u043B\u0430\u0435\u0442\u0435?"
+    AnswerLeft: "\u0428\u0430\u0432\u0435\u0440\u043C\u0443!"
+    AnswerRight: "\u0422\u0443\u0430\u043B\u0435\u0442?"
+  - id: shawarma1left
+    Image: {fileID: 21300000, guid: 40d1793deaef89a42be6ee8040e67538, type: 3}
+    Description: fastfood, no english
+    Question: "\u0421\u0434\u0435\u043B\u0430\u0435\u043C, \u0431\u0440\u0430\u0442!"
+    AnswerLeft: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0431\u0440\u0430\u0442!"
+    AnswerRight: "\u0422\u0443\u0430\u043B\u0435\u0442?"
+  - id: shawarma1right
+    Image: {fileID: 21300000, guid: 40d1793deaef89a42be6ee8040e67538, type: 3}
+    Description: fastfood, no english
+    Question: "\u0412 \u043A\u043E\u043D\u0446\u0435 \u0437\u0430\u043B\u0430 \u043D\u0430\u043F\u0440\u0430\u0432\u043E"
+    AnswerLeft: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E!"
+    AnswerRight: "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u044E!"
+  currentCard:
+    id: 
+    Image: {fileID: 0}
+    Description: 
+    Question: 
+    AnswerLeft: 
+    AnswerRight: 
+  happy: 1
+  hunger: 1
+  restRoom: 1
+  money: 1
+--- !u!4 &780162153
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780162151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1884700201}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &987243670
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +505,115 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1884700200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1884700201}
+  - component: {fileID: 1884700202}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884700201
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1884700200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 780162153}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1884700202
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1884700200}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 103e50374774eac4e984d78af593a08f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1958070435
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +624,7 @@ GameObject:
   - component: {fileID: 1958070437}
   - component: {fileID: 1958070436}
   m_Layer: 0
-  m_Name: CoreGame
+  m_Name: CoreGame_eng
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,125 +657,111 @@ MonoBehaviour:
   - id: hipster1
     Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
     Description: speak English
-    Question: "\u0427\u0435\u0433\u043E \u0442\u0435\u0431\u0435, \u043F\u0430\u0440\u0435\u043D\u044C?"
-    AnswerLeft: MacDoladls
-    AnswerRight: "\u041E\u0431\u043D\u0430\u043B\u0438\u0447\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442\u043A\u0443"
+    Question: What do you want?
+    AnswerLeft: MacDonalds
+    AnswerRight: Cash my card
   - id: hipster1left
     Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
     Description: speak English
-    Question: "\u041D\u0435\u0437\u0434\u043E\u0440\u043E\u0432\u0430\u044F \u043F\u0438\u0449\u0430!
-      \u0424\u0430\u043B\u0430\u0444\u0435\u043B\u044C \u0438 \u0441\u043C\u0443\u0437\u0438
-      - \u043D\u0430\u0448\u0435 \u0432\u0441\u0435!"
-    AnswerLeft: "\u042F \u0432\u044B\u0440\u043E\u0441 \u043D\u0430 \u043D\u0435\u0439"
-    AnswerRight: "\u041D\u0435\u043D\u0430\u0432\u0438\u0436\u0443 \u0441\u043C\u0443\u0437\u0438"
+    Question: Junk food! Falafel and smoothies - is everything!
+    AnswerLeft: I grew up on it
+    AnswerRight: Hate smoothies
   - id: hipster1right
     Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
     Description: speak English
-    Question: "\u0411\u0430\u043D\u043A\u043E\u043C\u0430\u0442 \u043D\u0435\u0434\u0430\u043B\u0435\u043A\u043E.
-      \u042F \u043F\u0440\u043E\u0432\u043E\u0436\u0443 \u0442\u0435\u0431\u044F."
-    AnswerLeft: "\u0412\u0435\u0434\u0438 \u043C\u0435\u043D\u044F"
-    AnswerRight: "\u042F \u043F\u0435\u0440\u0435\u0434\u0443\u043C\u0430\u043B"
+    Question: ATM nearby. I'll take you.
+    AnswerLeft: Lead me
+    AnswerRight: Forget it
   - id: grandma1
     Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
     Description: old Lady
-    Question: "\u0421\u0442\u0440\u043E\u0433\u043E \u0441\u043C\u043E\u0442\u0440\u0438\u0442
-      \u043D\u0430 \u0442\u0435\u0431\u044F. \u0427\u0435\u0433\u043E \u043D\u0430\u0434\u043E,
-      \u0441\u044B\u043D\u043E\u043A?"
-    AnswerLeft: "\u0410\u044D\u0440\u043E\u043F\u043E\u0440\u0442"
-    AnswerRight: "\u041E\u0431\u043D\u0430\u043B\u0438\u0447\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442\u043A\u0443"
+    Question: Strictly looking at you. What do you want, son?
+    AnswerLeft: Airport
+    AnswerRight: Cash my card
   - id: grandma1left
     Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
     Description: old Lady
-    Question: "\u041F\u0443\u043B\u043A\u043E\u0432\u043E? \u042D\u0442\u043E \u0442\u0435\u0431\u0435
-      \u043D\u0430 \u043C\u0435\u0442\u0440\u043E \u043D\u0430\u0434\u043E. \u0441\u0442
-      \u041C\u043E\u0441\u043A\u043E\u0432\u0441\u043A\u0430\u044F."
-    AnswerLeft: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0431\u0430\u0431\u0443\u0448\u043A\u0430!"
-    AnswerRight: "\u041C\u0435\u0442\u0440\u043E? \u041D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E."
+    Question: Pulkovo? Go to metro st Moscow.
+    AnswerLeft: Thank you grandma!
+    AnswerRight: Metro? Don't understand.
   - id: grandma1right
     Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
     Description: old Lady
-    Question: "\u041D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E \u044F. \u0421\u043F\u0440\u043E\u0441\u0438
-      \u0443 \u0434\u0440\u0443\u0433\u043E\u0433\u043E."
-    AnswerLeft: "\u0411\u0435\u0441\u043F\u043E\u043B\u0435\u0437\u043D\u043E"
-    AnswerRight: "\u0418\u0437\u0432\u0438\u043D\u0438\u0442\u0435"
+    Question: No English. Find other
+    AnswerLeft: Useless
+    AnswerRight: Sorry
   - id: girl1
     Image: {fileID: 21300000, guid: 074eaf312fa11104eb41e5746104dc70, type: 3}
     Description: pretty girl
-    Question: "\u0427\u0442\u043E \u0435\u0449\u0435? \u042F \u0441\u043F\u0435\u0448\u0443."
-    AnswerLeft: "\u0413\u0434\u0435 \u0442\u0443\u0430\u043B\u0435\u0442?"
-    AnswerRight: "\u041A\u0440\u0430\u0441\u0438\u0432\u044B\u0439 \u0433\u043E\u0440\u043E\u0434!"
+    Question: What else? I'm in a hurry.
+    AnswerLeft: Where is the toilet?
+    AnswerRight: Beautiful city!
   - id: girl1left
     Image: {fileID: 21300000, guid: 074eaf312fa11104eb41e5746104dc70, type: 3}
     Description: pretty girl
-    Question: "\u041D\u0435 \u0437\u043D\u0430\u044E. \u041F\u043E\u0438\u0449\u0438
-      \u0441\u0430\u043C."
-    AnswerLeft: "\u041A\u0430\u043A \u0433\u0440\u0443\u0431\u043E!"
-    AnswerRight: "\u041D\u0443 \u0438\u0437\u0432\u0438\u043D\u0438\u0442\u0435!"
+    Question: I do not know. Look for yourself.
+    AnswerLeft: How rude!
+    AnswerRight: Sorry!
   - id: girl1right
     Image: {fileID: 21300000, guid: 074eaf312fa11104eb41e5746104dc70, type: 3}
     Description: pretty girl
-    Question: "\u041F\u0440\u0430\u0432\u0434\u0430! \u0422\u043E\u0433\u0434\u0430
-      \u0442\u0435\u0431\u0435 \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F
-      \u0437\u0434\u0430\u043D\u0438\u0435 \u0417\u0438\u043D\u0433\u0435\u0440\u0430,
-      \u0441 \u043A\u043D\u0438\u0436\u043D\u044B\u043C \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u043E\u043C."
-    AnswerLeft: "\u041E\u0431\u043E\u0436\u0430\u044E \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0443."
-    AnswerRight: "\u041A\u0443\u043F\u043B\u044E \u043A\u0430\u0440\u0442\u0443."
+    Question: Really? Then you'll love the Singer building, the bookstore.
+    AnswerLeft: love architecture
+    AnswerRight: Buy the map
   - id: homeless1
     Image: {fileID: 21300000, guid: a8a8c0eb626e09b4980d27b24a7a95d6, type: 3}
     Description: home less
-    Question: "\u041F\u043E\u0434\u0430\u0439\u0442\u0435 \u043D\u0430 \u043E\u043F\u043E\u0445\u043C\u0435\u043B!"
-    AnswerLeft: "\u0434\u0430\u0442\u044C \u0434\u0435\u043D\u0435\u0433"
-    AnswerRight: "\u043D\u0435 \u0434\u0430\u0432\u0430\u0442\u044C"
+    Question: Please, give me money for vodka!
+    AnswerLeft: give money
+    AnswerRight: no money
   - id: homeless1left
     Image: {fileID: 21300000, guid: a8a8c0eb626e09b4980d27b24a7a95d6, type: 3}
     Description: home less
-    Question: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0431\u0440\u0430\u0442!"
-    AnswerLeft: "\u0433\u0434\u0435 \u0442\u0443\u0430\u043B\u0435\u0442"
-    AnswerRight: "\u043D\u0435 \u0431\u043E\u043B\u0435\u0439"
+    Question: Thank's bro!
+    AnswerLeft: Where is WC?
+    AnswerRight: be well
   - id: homeless1right
     Image: {fileID: 21300000, guid: a8a8c0eb626e09b4980d27b24a7a95d6, type: 3}
     Description: home less
-    Question: "\u041F\u043E\u0434\u0430\u0439\u0442\u0435 \u043D\u0430 \u043E\u043F\u043E\u0445\u043C\u0435\u043B!"
-    AnswerLeft: "\u043F\u0438\u0442\u044C - \u0432\u0440\u0435\u0434\u043D\u043E!"
-    AnswerRight: "\u0433\u0434\u0435 \u0442\u0443\u0430\u043B\u0435\u0442?"
+    Question: Please, give me money
+    AnswerLeft: Don't drink!
+    AnswerRight: Where is WC?
   - id: mac1
     Image: {fileID: 21300000, guid: b15ef0096bd22d44197508a3ef1232e3, type: 3}
     Description: Mac Donalds
-    Question: "\u0421\u0432\u043E\u0431\u043E\u0434\u043D\u0430\u044F \u043A\u0430\u0441\u0441\u0430!"
-    AnswerLeft: "\u0422\u0443\u0430\u043B\u0435\u0442?"
+    Question: Next, please!
+    AnswerLeft: rest room?
     AnswerRight: Cheeseburger!
   - id: mac1left
     Image: {fileID: 21300000, guid: b15ef0096bd22d44197508a3ef1232e3, type: 3}
     Description: Mac Donalds
-    Question: "\u0422\u0443\u0430\u043B\u0435\u0442 - \u0432\u0441\u0435\u0433\u0434\u0430
-      \u0437\u0430\u043D\u044F\u0442"
-    AnswerLeft: "\u042F \u043F\u043E\u0434\u043E\u0436\u0434\u0443"
+    Question: The toilet is always busy
+    AnswerLeft: I'll wait
     AnswerRight: Cheeseburger!
   - id: mac1right
     Image: {fileID: 21300000, guid: b15ef0096bd22d44197508a3ef1232e3, type: 3}
     Description: Mac Donalds
-    Question: "\u0427\u0442\u043E-\u0442\u043E \u0435\u0449\u0435 \u0431\u0443\u0434\u0435\u0442\u0435?"
-    AnswerLeft: "\u041D\u0435\u0442. \u042D\u0442\u043E \u0432\u0441\u0435."
-    AnswerRight: "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u0435 \u0437\u0430\u043A\u0430\u0437"
+    Question: Something else?
+    AnswerLeft: No. That's all
+    AnswerRight: "\u0421ancel order"
   - id: shawarma1
     Image: {fileID: 21300000, guid: 40d1793deaef89a42be6ee8040e67538, type: 3}
     Description: fastfood, no english
-    Question: "\u0414\u043E\u0431\u0440\u044B\u0439 \u0434\u0435\u043D\u044C! \u0427\u0442\u043E
-      \u0436\u0435\u043B\u0430\u0435\u0442\u0435?"
-    AnswerLeft: "\u0428\u0430\u0432\u0435\u0440\u043C\u0443!"
-    AnswerRight: "\u0422\u0443\u0430\u043B\u0435\u0442?"
+    Question: Good day! What do you want?
+    AnswerLeft: Shawarma!
+    AnswerRight: Toilet?
   - id: shawarma1left
     Image: {fileID: 21300000, guid: 40d1793deaef89a42be6ee8040e67538, type: 3}
     Description: fastfood, no english
-    Question: "\u0421\u0434\u0435\u043B\u0430\u0435\u043C, \u0431\u0440\u0430\u0442!"
-    AnswerLeft: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0431\u0440\u0430\u0442!"
-    AnswerRight: "\u0422\u0443\u0430\u043B\u0435\u0442?"
+    Question: Will do, brother!
+    AnswerLeft: Thanks, bro!
+    AnswerRight: Toilet?
   - id: shawarma1right
     Image: {fileID: 21300000, guid: 40d1793deaef89a42be6ee8040e67538, type: 3}
     Description: fastfood, no english
-    Question: "\u0412 \u043A\u043E\u043D\u0446\u0435 \u0437\u0430\u043B\u0430 \u043D\u0430\u043F\u0440\u0430\u0432\u043E"
-    AnswerLeft: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E!"
-    AnswerRight: "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u044E!"
+    Question: Straight and right
+    AnswerLeft: Thank you!
+    AnswerRight: Thanks!
   currentCard:
     id: 
     Image: {fileID: 0}
