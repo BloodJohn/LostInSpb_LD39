@@ -32,6 +32,9 @@ public class CoreGame : MonoBehaviour
     private const string grandma1 = "grandma1";
     private const string grandma1left = "grandma1left";
     private const string grandma1right = "grandma1right";
+    private const string girl1 = "girl1";
+    private const string girl1left = "girl1left";
+    private const string girl1right = "girl1right";
     private const string win = "win";
     private const string lose = "lose";
 
@@ -55,6 +58,7 @@ public class CoreGame : MonoBehaviour
         dropList.Clear();
         dropList.Add(hipster1);
         dropList.Add(grandma1);
+        dropList.Add(girl1);
 
         DropCard();
     }
@@ -123,6 +127,25 @@ public class CoreGame : MonoBehaviour
             happy = Mathf.Max(0f, happy - 0.2f);
             DropCard();
         }
+        else if (currentCard.id == girl1) //Спроси у девушки
+        {
+            //Где туалет?
+            happy = Mathf.Max(0f, happy - 0.1f);
+            SetCardById(girl1left);
+        }
+        else if (currentCard.id == girl1left) //Не знаю. Поищи сам.
+        {
+            //Как грубо!
+            happy = Mathf.Max(0f, happy - 0.3f);
+            restRoom = Mathf.Max(0f, restRoom - 0.1f);
+            DropCard();
+        }
+        else if (currentCard.id == girl1right) //Правда! Тогда тебе понравится здание Зингера, с книжным магазином.
+        {
+            //Обожаю архитектуру.
+            happy = Mathf.Min(1f, happy + 0.3f);
+            DropCard();
+        }
         else
         {
             Restart();
@@ -165,6 +188,25 @@ public class CoreGame : MonoBehaviour
         {
             //Извините
             happy = Mathf.Max(0f, happy - 0.1f);
+            DropCard();
+        }
+        else if (currentCard.id == girl1) //Спроси у девушки
+        {
+            //Красивый город!
+            happy = Mathf.Min(1f, happy + 0.1f);
+            SetCardById(girl1right);
+        }
+        else if (currentCard.id == girl1left) //Не знаю. Поищи сам.
+        {
+            //Ну извините!
+            happy = Mathf.Max(0f, happy - 0.2f);
+            restRoom = Mathf.Max(0f, restRoom - 0.1f);
+            DropCard();
+        }
+        else if (currentCard.id == girl1right) //Правда! Тогда тебе понравится здание Зингера, с книжным магазином.
+        {
+            //Куплю карту.
+            happy = Mathf.Min(1f, happy + 0.5f);
             DropCard();
         }
         else

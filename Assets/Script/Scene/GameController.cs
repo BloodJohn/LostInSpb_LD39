@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        if (CoreGame.Instance==null) LoadController.Load();
         NextCrad();
     }
 
@@ -64,7 +65,7 @@ public class GameController : MonoBehaviour
 
     private void OnMouseUp(Vector2 shift)
     {
-        if (Mathf.Abs(shift.x) > 1)
+        if (Mathf.Abs(shift.x) > 0.7f)
         {
             cardHolder.transform.localRotation = Quaternion.identity;
 
