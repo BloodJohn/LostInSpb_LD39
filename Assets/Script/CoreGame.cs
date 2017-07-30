@@ -48,52 +48,12 @@ public class CoreGame : MonoBehaviour
         //WriteFile();
     }
 
-    private void Restart()
-    {
-        happy = Random.Range(0.5f, 0.7f);
-        hunger = Random.Range(0.7f, 1f);
-        restRoom = Random.Range(0.7f, 1f);
-        money = Random.Range(0.1f, 0.3f);
-
-        dropList.Clear();
-        dropList.Add(hipster1);
-        dropList.Add(grandma1);
-        dropList.Add(girl1);
-
-        DropCard();
-    }
-
-    private void SetCardById(string id)
-    {
-        foreach (var card in desk)
-            if (card.id == id)
-            {
-                currentCard = card;
-                return;
-            }
-    }
-
-    private void DropCard()
-    {
-        if (dropList.Count > 0)
-        {
-            var index = Random.Range(0, dropList.Count);
-            SetCardById(dropList[index]);
-            dropList.RemoveAt(index);
-        }
-        else
-        {
-            SetCardById(win);
-        }
-    }
-
     public void SetLeft()
     {
         if (currentCard.id == hipster1) //Спроси у хипстера
         {
             //Где здесь MacDoladls?
             happy = Mathf.Max(0f, happy - 0.1f);
-            hunger = Mathf.Max(0f, hunger - 0.1f);
             SetCardById(hipster1left);
         }
         else if (currentCard.id == hipster1right) //Банкомат недалеко. Я провожу тебя.
@@ -175,7 +135,7 @@ public class CoreGame : MonoBehaviour
         else if (currentCard.id == grandma1) //Спроси у бабушки
         {
             //Как обналичить кредитку?
-            happy = Mathf.Min(1f, happy + 0.3f);
+            happy = Mathf.Max(0f, happy - 0.2f);
             SetCardById(grandma1right);
         }
         else if (currentCard.id == grandma1left) //Пулково? Это тебе на метро надо. ст Московская.
@@ -213,6 +173,61 @@ public class CoreGame : MonoBehaviour
         {
             Restart();
         }
+    }
+
+    private void Restart()
+    {
+        happy = Random.Range(0.5f, 0.7f);
+        hunger = Random.Range(0.7f, 1f);
+        restRoom = Random.Range(0.7f, 1f);
+        money = Random.Range(0.1f, 0.3f);
+
+        dropList.Clear();
+        dropList.Add(hipster1);
+        dropList.Add(grandma1);
+        dropList.Add(girl1);
+
+        DropCard();
+    }
+
+    private void SetCardById(string id)
+    {
+        if (NextTurn()) id = lose;
+
+        foreach (var card in desk)
+            if (card.id == id)
+            {
+                currentCard = card;
+                return;
+            }
+    }
+
+    private void DropCard()
+    {
+        if (NextTurn())
+        {
+            SetCardById(lose);
+            return;
+        }
+
+        if (dropList.Count > 0)
+        {
+            var index = Random.Range(0, dropList.Count);
+            SetCardById(dropList[index]);
+            dropList.RemoveAt(index);
+        }
+        else
+        {
+            SetCardById(win);
+        }
+    }
+
+    private bool NextTurn()
+    {
+        hunger = Mathf.Max(0f, hunger - 0.1f);
+        restRoom = Mathf.Max(0f, restRoom - 0.1f);
+
+        return happy <= 0 || hunger <= 0 || restRoom <= 0;
     }
 
     /*private void WriteFile()
