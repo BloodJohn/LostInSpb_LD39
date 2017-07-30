@@ -204,12 +204,6 @@ public class CoreGame : MonoBehaviour
 
     private void DropCard()
     {
-        if (NextTurn())
-        {
-            SetCardById(lose);
-            return;
-        }
-
         if (dropList.Count > 0)
         {
             var index = Random.Range(0, dropList.Count);
