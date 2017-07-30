@@ -252,8 +252,7 @@ MonoBehaviour:
   - id: hipster1
     Image: {fileID: 21300000, guid: 40c1badacd1070d46963c8427dda64d0, type: 3}
     Description: speak English
-    Question: "\u0427\u0442\u043E \u0442\u0435\u0431\u044F \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u0443\u0435\u0442
-      \u043F\u0440\u0435\u0436\u0434\u0435 \u0432\u0441\u0435\u0433\u043E"
+    Question: "\u0427\u0435\u0433\u043E \u0442\u0435\u0431\u0435, \u043F\u0430\u0440\u0435\u043D\u044C?"
     AnswerLeft: MacDoladls
     AnswerRight: "\u041E\u0431\u043D\u0430\u043B\u0438\u0447\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442\u043A\u0443"
   - id: hipster1left
@@ -279,6 +278,21 @@ MonoBehaviour:
       \u0441\u044B\u043D\u043E\u043A?"
     AnswerLeft: "\u0410\u044D\u0440\u043E\u043F\u043E\u0440\u0442"
     AnswerRight: "\u041E\u0431\u043D\u0430\u043B\u0438\u0447\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442\u043A\u0443"
+  - id: grandma1left
+    Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
+    Description: old Lady
+    Question: "\u041F\u0443\u043B\u043A\u043E\u0432\u043E? \u042D\u0442\u043E \u0442\u0435\u0431\u0435
+      \u043D\u0430 \u043C\u0435\u0442\u0440\u043E \u043D\u0430\u0434\u043E. \u0441\u0442
+      \u041C\u043E\u0441\u043A\u043E\u0432\u0441\u043A\u0430\u044F."
+    AnswerLeft: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0431\u0430\u0431\u0443\u0448\u043A\u0430!"
+    AnswerRight: "\u041C\u0435\u0442\u0440\u043E? \u041D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E."
+  - id: grandma1right
+    Image: {fileID: 21300000, guid: 9e18af46aeaecae4c8d4403324404552, type: 3}
+    Description: old Lady
+    Question: "\u041D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E \u044F. \u0421\u043F\u0440\u043E\u0441\u0438
+      \u0443 \u0434\u0440\u0443\u0433\u043E\u0433\u043E."
+    AnswerLeft: "\u0411\u0435\u0441\u043F\u043E\u043B\u0435\u0437\u043D\u043E"
+    AnswerRight: "\u0418\u0437\u0432\u0438\u043D\u0438\u0442\u0435"
   currentCard:
     id: 
     Image: {fileID: 0}

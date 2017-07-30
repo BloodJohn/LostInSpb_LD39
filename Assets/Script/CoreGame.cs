@@ -30,6 +30,8 @@ public class CoreGame : MonoBehaviour
     private const string hipster1left = "hipster1left";
     private const string hipster1right = "hipster1right";
     private const string grandma1 = "grandma1";
+    private const string grandma1left = "grandma1left";
+    private const string grandma1right = "grandma1right";
     private const string win = "win";
     private const string lose = "lose";
 
@@ -95,13 +97,31 @@ public class CoreGame : MonoBehaviour
             //Спасибо!
             happy = Mathf.Min(1f, happy + 0.2f);
             money = Mathf.Min(1f, money + 0.5f);
-            SetCardById(hipster1);
+            DropCard();
         }
         else if (currentCard.id == hipster1left) //Нездоровая пища! Фалафель и смузи - наше все!
         {
             //Я вырос на ней
             happy = Mathf.Max(0f, happy - 0.1f);
-            SetCardById(hipster1);
+            DropCard();
+        }
+        else if (currentCard.id == grandma1) //Спроси у бабушки
+        {
+            //Аэропорт?
+            happy = Mathf.Min(1f, happy + 0.1f);
+            SetCardById(grandma1left);
+        }
+        else if (currentCard.id == grandma1left) //Пулково? Это тебе на метро надо. ст Московская.
+        {
+            //Спасибо бабушка!
+            happy = Mathf.Min(1f, happy + 0.2f);
+            DropCard();
+        }
+        else if (currentCard.id == grandma1right) //Не понимаю я. Спроси у другого.
+        {
+            //Бесполезно
+            happy = Mathf.Max(0f, happy - 0.2f);
+            DropCard();
         }
         else
         {
@@ -121,13 +141,31 @@ public class CoreGame : MonoBehaviour
         {
             //Я передумал
             happy = Mathf.Max(0f, happy - 0.1f);
-            SetCardById(hipster1);
+            DropCard();
         }
         else if (currentCard.id == hipster1left) //Нездоровая пища! Фалафель и смузи - наше все!
         {
             //Ненавижу смузи
             happy = Mathf.Max(0f, happy - 0.2f);
-            SetCardById(hipster1);
+            DropCard();
+        }
+        else if (currentCard.id == grandma1) //Спроси у бабушки
+        {
+            //Как обналичить кредитку?
+            happy = Mathf.Min(1f, happy + 0.3f);
+            SetCardById(grandma1right);
+        }
+        else if (currentCard.id == grandma1left) //Пулково? Это тебе на метро надо. ст Московская.
+        {
+            //Метро? Не понимаю.
+            happy = Mathf.Min(1f, happy + 0.1f);
+            DropCard();
+        }
+        else if (currentCard.id == grandma1right) //Не понимаю я. Спроси у другого.
+        {
+            //Извините
+            happy = Mathf.Max(0f, happy - 0.1f);
+            DropCard();
         }
         else
         {
