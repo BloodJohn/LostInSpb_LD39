@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 902165f2dd714fc4ea04c3967889765f
+timeCreated: 1501515173
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Open Sans Condensed
+  fontNames:
+  - Open Sans Condensed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1b7dc566e047ccc4f8d81ecc5a94df4b, type: 3}
+  - {fileID: 12800000, guid: 62dc7efc95ed7484f864236de427063f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
