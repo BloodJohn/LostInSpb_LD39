@@ -65,10 +65,10 @@ public class GameController : MonoBehaviour
 
     private void OnMouseUp(Vector2 shift)
     {
+        cardHolder.transform.localRotation = Quaternion.identity;
+
         if (Mathf.Abs(shift.x) > 0.7f)
         {
-            cardHolder.transform.localRotation = Quaternion.identity;
-
             if (shift.x > 0)
             {
                 CoreGame.Instance.SetRight();
