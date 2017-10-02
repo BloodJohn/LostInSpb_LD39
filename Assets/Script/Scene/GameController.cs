@@ -56,7 +56,7 @@ public class GameController : MonoBehaviour
         //Debug.LogFormat("shift {0}", shift);
 
         var newRot= Quaternion.identity;
-        newRot.z = Mathf.Atan(-shift.x)/10;
+        newRot.z = Mathf.Atan(-shift.x)/4;
 
         cardHolder.transform.localRotation = newRot;
 
